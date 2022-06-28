@@ -5,10 +5,10 @@ class Project(models.Model):
         verbose_name="Título")
     description = models.TextField(
         verbose_name="Descripción")
-    image = models.ImageField(upload_to="projects",
+    image = models.ImageField(upload_to="projects",  
         verbose_name="Imagen")
-    created = models.DateTimeField(auto_now_add=True, 
-        verbose_name="Fecha de creación")
+    link = models.URLField(null=True, blank=True,
+        verbose_name="Dirección Web")
     updated = models.DateTimeField(auto_now=True,
         verbose_name="Fecha de edición")
 
